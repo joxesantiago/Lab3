@@ -24,7 +24,7 @@ public class MyPanelClass extends JPanel {
                         int height = y2 - y1;
  
                         //Paint the background
-                        g.setColor(Color.magenta);
+                        g.setColor(Color.RED);
                         g.fillRect(x1, y1, width + 1, height + 1);
 //                        g.setColor(Color.YELLOW);
 //                        g.drawRect(x1, y1, width, height);
@@ -46,6 +46,24 @@ public class MyPanelClass extends JPanel {
                         p.addPoint(x1 + 15, y1 + 25);
                         g.setColor(Color.YELLOW);
 //                      g.fillPolygon(p);
+                        
+                      //White Strippes
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1+40, width, 40);
+                        g.fillRect(x1, y1+120, width, 40);
+                        
+                        //blue triangle
+                        
+                        Polygon t = new Polygon();
+                        t.addPoint(x1, y1);
+                        t.addPoint(width/2, height/2);
+                        t.addPoint(x1, height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(t);
+                        
+                        g.setColor(Color.WHITE);
+                        x1 =+20;
+                        y1=+20;
                         Polygon p2 = new Polygon();
                         p2.addPoint(x1 + 25, y1 + 73);
                         p2.addPoint(x1 + 41, y1 + 73);
@@ -57,8 +75,9 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 47, y1 + 88);
                         p2.addPoint(x1 + 34, y1 + 98);
                         p2.addPoint(x1 + 38, y1 + 83);
-                        g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillPolygon(p2);
+                        
+                        
                         
                         
                         
