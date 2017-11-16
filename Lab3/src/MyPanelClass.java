@@ -61,6 +61,7 @@ public class MyPanelClass extends JPanel {
                         g.setColor(Color.BLUE);
                         g.fillPolygon(t);
                         
+                        //Star
                         g.setColor(Color.WHITE);
                         x1 =+20;
                         y1=+20;
